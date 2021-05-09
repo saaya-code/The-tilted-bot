@@ -1,0 +1,24 @@
+{
+  "name": "The-tilted-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saaya-code/The-tilted-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saaya-code/The-tilted-bot/issues"
+  },
+  "homepage": "https://github.com/saaya-code/The-tilted-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.1"
+  }
+}
