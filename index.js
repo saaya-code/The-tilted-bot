@@ -6,7 +6,11 @@ client.login(process.env.TOKEN)
 client.on("ready",()=>{
     console.log("I'm ready!")
 })
-
+client.on("message",msg=>{
+    if(msg.content=="!ping"){
+        msg.reply("Pong!")
+    }
+})
 client.on("message",msg=>{
     if(msg.content=="start" && msg.author.id=="398147766687236107"){
         count=0;
