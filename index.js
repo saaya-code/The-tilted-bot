@@ -15,9 +15,9 @@ client.on("message",msg=>{
     if(msg.content=="start" && (msg.author.id=="398147766687236107"||msg.author.id=="364896741742477313")){
         count=0;
         msg.channel.send("Starting operation..").then((msg1)=>{
-            msg.guild.members.cache.filter(i => !i.hasPermission("ADMINISTRATOR")&&!i.displayName.toLowerCase().includes("the tilted")).map((value, key) => {
-                value.setNickname(`The Tilted ${value.nickname}`).catch((e)=>{
-                    console.error("err1")
+            msg.guild.members.cache.filter(i => !i.hasPermission("ADMINISTRATOR")).map((value, key) => {
+                value.setNickname(`The Tilted ${value.user.username}`).catch((e)=>{
+                    console.error(e)
                 });
                 count++;
                 });
@@ -29,7 +29,7 @@ client.on("message",msg=>{
     }
 })
 client.on("guildMemberAdd",m=>{
-    console.log(m.displayName)
-    m.setNickname(`The Tilted ${m.displayName}`)
+    console.log(m.user.username)
+    m.setNickname(`The Tilted ${m.user.username}`)
 })
 
